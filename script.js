@@ -7,12 +7,26 @@ function tampilkanData() {
   tableBody.innerHTML = '';
   latihanData.forEach(entry => {
     const row = document.createElement('tr');
+
+    // Cek hari dalam angka (0 = Minggu, 1 = Senin, ..., 6 = Sabtu)
+    const tanggal = new Date(entry.date);
+    const hari = tanggal.getDay();
+
+    // Highlight jika Rabu (3), Jumat (5), Minggu (0)
+    const isHariLatihan = hari === 0 || hari === 3 || hari === 5;
+
     row.innerHTML = `
       <td>${entry.date}</td>
       <td>${entry.pushup}</td>
       <td>${entry.pullup}</td>
       <td>${entry.situp}</td>
     `;
+
+    if (isHariLatihan) {
+      row.style.backgroundColor = '#d1ffd6'; // hijau muda
+      row.style.fontWeight = 'bold';
+    }
+
     tableBody.appendChild(row);
   });
 }

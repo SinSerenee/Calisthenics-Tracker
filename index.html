@@ -1,36 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Calisthenics Tracker</title>
+  <title>Tracker Latihan Calisthenics</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<!-- Tambah elemen canvas untuk grafik -->
-<h2>Grafik Perkembangan</h2>
-<canvas id="latihanChart" width="400" height="200"></canvas>
-
-<!-- Tambahkan Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <body>
   <div class="container">
-    <h1>Calisthenics Tracker</h1>
+    <h1>Tracker Latihan Harian</h1>
     
     <form id="trackerForm">
-      <label>Tanggal:</label>
-      <input type="date" id="date" required><br>
+      <label for="date">Tanggal:</label>
+      <input type="date" id="date" required>
 
-      <label>Push-Up:</label>
-      <input type="number" id="pushup" min="0" required><br>
+      <label for="pushup">Push-Up:</label>
+      <input type="number" id="pushup" required min="0">
 
-      <label>Pull-Up:</label>
-      <input type="number" id="pullup" min="0" required><br>
+      <label for="pullup">Pull-Up:</label>
+      <input type="number" id="pullup" required min="0">
 
-      <label>Sit-Up:</label>
-      <input type="number" id="situp" min="0" required><br>
+      <label for="situp">Sit-Up:</label>
+      <input type="number" id="situp" required min="0">
 
-      <button type="submit">Simpan</button>
+      <button type="submit">Simpan Latihan</button>
     </form>
 
     <h2>Riwayat Latihan</h2>
@@ -43,8 +37,13 @@
           <th>Sit-Up</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>
+        <!-- Diisi dari JS -->
+      </tbody>
     </table>
+
+    <h2>Grafik Perkembangan</h2>
+    <canvas id="latihanChart" width="400" height="200"></canvas>
   </div>
 
   <script src="script.js"></script>
