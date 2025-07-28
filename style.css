@@ -1,0 +1,88 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+form label {
+  grid-column: span 2;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+form input {
+  grid-column: span 2;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #e9ecef;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Highlight baris hari latihan */
+tr td:first-child {
+  font-weight: normal;
+}
+tr td:first-child + td {
+  font-weight: normal;
+}
+tr.highlight-hari-latihan {
+  background-color: #d1ffd6;
+  font-weight: bold;
+}
